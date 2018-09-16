@@ -18,23 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MQD-Du-iYq">
-                                <rect key="frame" x="163" y="155" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZZ-tY-E6A">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eXk-aQ-SKE">
+                                <rect key="frame" x="164.5" y="560" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.47450980539999998" green="0.8392156959" blue="0.97647058959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="OnValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vXg-ko-4rl"/>
+                                    <action selector="OnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U9E-uT-2S5"/>
                                 </connections>
-                            </switch>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eXk-aQ-SKE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3EN-62-WP3"/>
+                            <constraint firstItem="ZZZ-tY-E6A" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ajb-LR-OjA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eXk-aQ-SKE" secondAttribute="bottom" constant="77" id="MWp-1l-50f"/>
+                            <constraint firstItem="ZZZ-tY-E6A" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RAY-NH-ppf"/>
+                            <constraint firstItem="ZZZ-tY-E6A" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Xyn-YS-1D9"/>
+                            <constraint firstItem="ZZZ-tY-E6A" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ytc-iL-VRR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="switch1" destination="MQD-Du-iYq" id="KZD-H5-svb"/>
+                        <outlet property="preview" destination="ZZZ-tY-E6A" id="nyU-ba-bGe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
