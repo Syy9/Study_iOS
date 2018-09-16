@@ -10,9 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var switch1: UISwitch!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let defaults = UserDefaults.standard
+        let value = defaults.bool(forKey: "switchOn")
+        switch1.setOn(value, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +26,9 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func OnValueChanged(_ sender: UISwitch) {
+        let defaults = UserDefaults.standard
+        defaults.set(sender.isOn, forKey: "switchOn")
+    }
 }
 
